@@ -1,0 +1,11 @@
+from enum import IntEnum
+
+class ModelInput(IntEnum):
+    CLOSE = -1
+    CORRECT_PIN = 0
+    RETURN = 1
+    WITHDRAW = 2
+    DEPOSIT = 3
+    BALANCE = 4
+    RECEIPT = 5
+    END = 6
