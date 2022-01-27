@@ -8,11 +8,11 @@ Coded using Python 3.9.9
 `python app.py`
 
 ### Files
-*satm.py*: SimpleATM Class
-*states.py*: All implemented states as integer enumerations
-*modelinput.py*: All implemented inputs as integer enumerations
-*logic.py*: Contains the state transition table and checks whether a transition is valid given the current state of the ATM and given input
-*app.py*: Run the SimpleATM State Machine Simulation 
++ satm.py: SimpleATM Class
++ states.py: All implemented states as integer enumerations
++ modelinput.py: All implemented inputs as integer enumerations
++ logic.py: Contains the state transition table and checks whether a transition is valid given the current state of the ATM and given input
++ app.py: Run the SimpleATM State Machine Simulation 
 
 ### States and Inputs
 States and Model Inputs were coded using `IntEnums` so that a *State Transition Table* can be implemented using a `list` where the integer enumerations can be used as list indices
