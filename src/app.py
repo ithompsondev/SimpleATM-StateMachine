@@ -20,21 +20,22 @@ def get_input():
         if choice == 'x':
             return ModelInput.CLOSE
         else:
-            choice = int(choice)
-            if choice == 1:
+            if choice == '1':
                 choice = ModelInput.CORRECT_PIN
-            elif choice == 2:
+            elif choice == '2':
                 choice = ModelInput.WITHDRAW_FUNDS
-            elif choice == 3:
+            elif choice == '3':
                 choice = ModelInput.DEPOSIT_FUNDS
-            elif choice == 4:
+            elif choice == '4':
                 choice = ModelInput.BALANCE_CHECK
-            elif choice == 5:
+            elif choice == '5':
                 choice = ModelInput.RECEIPT_PRINT
-            elif choice == 6:
+            elif choice == '6':
                 choice = ModelInput.RETURN
-            elif choice == 7:
+            elif choice == '7':
                 choice = ModelInput.END_SERVICE
+            else:
+                choice = ModelInput.INVALID
             return choice
     except Exception as e:
         print('Invalid option selected.')
@@ -43,6 +44,7 @@ def main():
     bname = 'Simple Bank Branch'
     bcode = 'SBB001'
     new_atm = SimpleATM(bname,bcode)
+    print(new_atm)
     while True:
         transition_options()
         choice = get_input()

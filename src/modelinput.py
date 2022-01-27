@@ -1,6 +1,7 @@
 from enum import IntEnum
 
 class ModelInput(IntEnum):
+    INVALID = -2
     CLOSE = -1
     CORRECT_PIN = 0
     RETURN = 1

@@ -10,7 +10,7 @@ class SimpleATM:
         self.state = State.IDLE # Enum states
 		
     def __str__(self):
-        print(f'Thank you for using this ATM from {self.branch_name} | {self.branch_code}')
+        return f'Thank you for using this ATM from {self.branch_name} | {self.branch_code}'
         
     def get_current_state(self):
         print(f'The ATM is currently: {self.state.value}')
@@ -19,6 +19,8 @@ class SimpleATM:
         if input == ModelInput.CLOSE:
             print('SimpleATM closing...')
             sys.exit(1)
+        elif input == ModelInput.INVALID:
+            print(f'Invalid choice selected. Cannot transition from {self.state.name}')
         elif logic.is_valid_transition(self.state,input):
             prev_state = self.state
             self.state = logic.transition(self.state,input)
